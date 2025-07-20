@@ -22,10 +22,7 @@ const Weather = () => {
         (position) => {
           fetchWeatherByCoords(position.coords.latitude, position.coords.longitude);
         },
-        (error) => {
-          setError("Location access denied. Please search manually.");
-          setLoading(false);
-        }
+       
       );
     } else {
       setError("Geolocation not supported by your browser");
